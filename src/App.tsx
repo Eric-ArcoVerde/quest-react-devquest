@@ -2,7 +2,9 @@ function App() {
 
   return (
     <>
-      
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </>
   )
 }
