@@ -8,6 +8,8 @@ type Film = {
     producer: string;
     release_date: number;
     rt_score: number;
+    image: string;
+    movie_banner: string;
 }
 
 const fetchFilmList = async (limit: number = 10): Promise<Film[]> => {

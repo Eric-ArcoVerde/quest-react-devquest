@@ -16,16 +16,17 @@ export const FilmDetail = () => {
 
     return (
         <>
-        <h2 className="bg-red-400">Detalhes do filme</h2>
+            <main className="flex flex-col gap-5 m-5 border rounded-2xl p-5 bg-gray-700">
+                <h2 className="text-3xl">Detalhes do filme: {filmDetail?.title}</h2>
 
-        <div>
-            <h3>Título: {filmDetail?.title}</h3>
-            <p>Descrição: {filmDetail?.description}</p>
-            <p>Diretor: {filmDetail?.director}</p>
-            <p>Produtor: {filmDetail?.producer}</p>
-            <p>Ano de Lançamento: {filmDetail?.release_date}</p>
-            <p>Pontuação do Rotten Tomatoes: {filmDetail?.rt_score}</p>
-        </div>
+                <div className="flex flex-col gap-2">
+                    <p>Descrição: {filmDetail?.description}</p>
+                    <p>Diretor: {filmDetail?.director}</p>
+                    <p>Produtor: {filmDetail?.producer}</p>
+                    <p>Ano de Lançamento: {filmDetail?.release_date}</p>
+                    <p>Pontuação do Rotten Tomatoes 🍅: {filmDetail?.rt_score}</p>
+                </div>
+            </main>
         </>
     )
 }

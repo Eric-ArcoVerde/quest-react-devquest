@@ -5,9 +5,11 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
+      <section className="bg-gray-800 text-white min-h-screen">
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
+      </section>
     </>
   )
 }
