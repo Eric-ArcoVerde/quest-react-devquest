@@ -11,7 +11,7 @@ type Film = {
 }
 
 const fetchFilmList = async (limit: number = 10): Promise<Film[]> => {
-    const response = await fetch('https://ghibliapi.vercel.app/films');
+    const response = await fetch(`https://ghibliapi.vercel.app/films?_limit=${limit}`);
     if(!response.ok) throw new Error("Erro ao buscar filmes")
         console.log(response.json)
     return response.json();
@@ -19,7 +19,7 @@ const fetchFilmList = async (limit: number = 10): Promise<Film[]> => {
 
 fetchFilmList()
 
-export function useFilmList(limit: number) {
+export function useFilmList(limit: number = 10) {
     return useQuery<Film[]>({
         queryKey: ['films', limit],
         queryFn: () => fetchFilmList(limit),
