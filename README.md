@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# Quest React - DevQuest 2.0 🎬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um desafio (Quest) do curso DevQuest 2.0, focado no desenvolvimento de uma aplicação React moderna que consome dados da API do Studio Ghibli para listar e detalhar seus filmes.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O projeto foi construído com as seguintes tecnologias e bibliotecas:
 
-## React Compiler
+- **[React 19](https://react.dev/):** Biblioteca principal para construção da interface.
+- **[TypeScript](https://www.typescriptlang.org/):** Adição de tipagem estática para maior segurança no desenvolvimento.
+- **[Vite](https://vitejs.dev/):** Ferramenta de build e servidor de desenvolvimento extremamente rápido.
+- **[React Router DOM](https://reactrouter.com/):** Gerenciamento de rotas da aplicação (Navegação).
+- **[TanStack React Query](https://tanstack.com/query/latest):** Gerenciamento de estados assíncronos e cache de dados da API.
+- **[Tailwind CSS 4](https://tailwindcss.com/):** Framework CSS utilitário para estilização rápida e moderna.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Funcionalidades
 
-## Expanding the ESLint configuration
+- Listagem de 10 filmes do Studio Ghibli consumindo a API oficial.
+- Detalhes individuais de cada filme.
+- Navegação entre páginas (Home e Detalhes).
+- Tratamento de estados de carregamento (Loading) e erros.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Como executar o projeto
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/quest-react-devquest.git
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2. **Entre na pasta do projeto:**
+   ```bash
+   cd quest-react-devquest
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+
+4. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+
+5. **Acesse no navegador:**
+   O Vite geralmente disponibiliza o projeto em `http://localhost:5173`.
+
+## 📁 Estrutura de Pastas
+
+```text
+src/
+├── assets/      # Imagens e arquivos estáticos
+├── components/  # Componentes reutilizáveis (Header, Layout, etc)
+├── hooks/       # Hooks customizados (useFilmList)
+├── pages/       # Páginas da aplicação (Home, FilmDetail)
+├── routes/      # Configuração das rotas com React Router
+└── styles/      # Arquivos de estilo global
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+Desenvolvido por Eric Barros Arco-Verde como parte do aprendizado no curso **DevQuest**.
